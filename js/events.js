@@ -29,6 +29,12 @@ document.querySelector("#btn-pause").addEventListener ("click", function () {
   "use strict";
   Controller.pauseRecording();
 });
+/* Home View Compass Flipbox */
+document.querySelector("#a-flipbox").addEventListener ("click", function () {
+  "use strict";
+  console.log("toggle flipbox");
+  document.getElementById("compass-flipbox").toggle();
+});
 
 
 /*----------------- Infos View -----------------*/

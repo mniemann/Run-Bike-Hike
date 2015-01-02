@@ -161,21 +161,28 @@
                   <div id="home-acc" class="new-line home-value align-center text-big text-thin">?</div>
                 </li>
                 <li class="bottom">
-                  <div data-l10n-id="latitude" class="new-line home-title text-small text-thin">Latitude</div>
+                  <a href="#" id="a-flipbox"><x-flipbox id="compass-flipbox">
+                  <div>
+                  <div data-l10n-id="latitude" class="text-left new-line home-title text-small text-thin">Latitude</div>
                   <div id="home-lat" class="new-line home-value-right text-small text-thin">?</div>
 
-                  <div data-l10n-id="longitude" class="new-line home-title text-small text-thin">Longitude</div>
+                  <div data-l10n-id="longitude" class="text-left new-line home-title text-small text-thin">Longitude</div>
                   <div id="home-lon" class="new-line home-value-right text-small text-thin">?</div>
 
-                  <div data-l10n-id="direction" class="new-line home-title text-small text-thin">Direction</div>
+                  <div data-l10n-id="direction" class="text-left new-line home-title text-small text-thin">Direction</div>
                   <div id="home-dir" class="new-line home-value-right text-small text-thin">?</div>
+                  </div>
+                  <div>
+                    <img src="img/compass-2.png">
+                  </div>
+                    </x-flipbox></a>
                 </li>
                 <li class="button">
                   <button data-l10n-id="start" id="btn-start-stop" class="recommend big">Start</button>
                 </li>
 
 
-                <li id="message" class="front">
+                <li id="message" class="behind hidden">
                   <div id="message-area" class="align-center">
                     <progress id="spinner"></progress>
                     <p data-l10n-id="retreiving" id="msg" class="text-big align-center">Retreiving GPS signal. It may take some time...</p>

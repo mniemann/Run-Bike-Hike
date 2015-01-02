@@ -261,6 +261,14 @@ x-layout > [data-type="home"] ul li:nth-child(even) {
   /*border-bottom: solid 1px #1F3A93;*/
 }
 
+x-layout > [data-type="home"] ul li x-flipbox img {
+  /* background-image: url("../img/compass-2.png"); */
+  display: inline-block;
+  height: 148px;
+  width: 148px;
+}
+
+.text-left {text-align: left;}
 
 
 x-layout > [data-type="details"] ul {
