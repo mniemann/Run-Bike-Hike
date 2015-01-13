@@ -17,7 +17,7 @@ var Controller = function() {
 
   function init() {
     DB.initiate(__initiateSuccess, __initiateError);
-    if (navigator.geolocation) {
+/*    if (navigator.geolocation) {
       watchID = navigator.geolocation.watchPosition(
         function(inPosition){
           __locationChanged(inPosition);
@@ -31,7 +31,7 @@ var Controller = function() {
           maximumAge: 0
         }
       );
-    }
+    }*/
   }
   function __initiateSuccess() {
     DB.getConfig(__getConfigSuccess, __getConfigError);
@@ -42,7 +42,7 @@ var Controller = function() {
   }
 
   function __locationChanged(inPosition){
-    // console.log("Position found", inPosition);
+    // console.log("Position found", new Date(inPosition.timestamp));
     if (inPosition.coords.accuracy < 50) {
       if (tracking && !pause) {
         // console.log("tracking");
@@ -67,7 +67,7 @@ var Controller = function() {
     }
   }
 
-  function __changeFrequency(inFreq) {
+  function __startWatch(inFreq) {
     navigator.geolocation.clearWatch(watchID);
     watchID = navigator.geolocation.watchPosition(
       function(inPosition){
@@ -77,7 +77,7 @@ var Controller = function() {
         __locationError(inError);
       },
       {
-        enableHighAccuracy: true,
+        enableHighAccuracy: false,
         timeout: Infinity,
         maximumAge: inFreq
       }
@@ -199,10 +199,11 @@ var Controller = function() {
       console.log("frequency not present in Settings, so we put it !");
       savingSettings("frequency", "0");
     }
-    if (inSettings.frequency !== "0") {
+    /*if (inSettings.frequency !== "0") {
       console.log("frequency value is not default!");
       __changeFrequency(parseInt(inSettings.frequency, 10));
-    }
+    }*/
+    __startWatch(parseInt(inSettings.frequency, 10));
 
     var storages = FxDeviceStorage.getAvailableStorages();
     var select = document.getElementById("storage");
