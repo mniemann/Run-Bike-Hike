@@ -52,7 +52,7 @@ var HomeView = function() {
     // empty message area
     document.getElementById('msg').innerHTML = "";
     //display compass
-    // __displayCompass(inPosition.coords);
+    __displayCompass(inPosition.coords);
     if (inPosition.coords.heading > 0 ) {
       document.getElementById('home-dir').innerHTML = inPosition.coords.heading.toFixed(0);
     } else {
@@ -96,8 +96,8 @@ var HomeView = function() {
     document.getElementById("accmsg").className = "text-big align-center";
   }
 
-/*  function __displayCompass(event) {
-    // compass = document.getElementById("home-compass");
+  function __displayCompass(event) {
+    var compass = document.getElementById("home-compass");
     //~ console.log("heading:", event.heading);
     if (event.heading > 0 ){
       // in case, when GPS is disabled (only if GSM fix is available),
@@ -105,19 +105,12 @@ var HomeView = function() {
       // but it isn't... So we use this strange condition that don't
       // work if we go _directly_ to north...
       //
-      // opacity = 1; // 0.8
-      // compass.src = 'img/compass.png';
       var rot = 360 - event.heading.toFixed(0);
       compass.style.transform = "rotate(" + rot + "deg)";
-      // compass.style.webkitTransform = "rotate(" + rot + "deg)";
-      document.getElementById('home-dir').innerHTML = event.heading;
     } else {
-      // compass.src = 'img/compass_inactive.png';
-      // opacity = 1; // 0.3
       document.getElementById('home-dir').innerHTML = "??";
     }
-    // compass.style.opacity = opacity;
-  }*/
+  }
 
   return {
     // hideSpinner: hideSpinner,
