@@ -264,8 +264,8 @@ x-layout > [data-type="home"] ul li:nth-child(even) {
 x-layout > [data-type="home"] ul li x-flipbox img {
   /* background-image: url("../img/compass-2.png"); */
   display: inline-block;
-  height: 148px;
-  width: 148px;
+  height: 132px;
+  width: 132px;
 }
 
 .text-left {text-align: left;}
