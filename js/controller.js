@@ -61,7 +61,7 @@ var Controller = function() {
   }
 
   function __locationError(inError){
-    console.log("error:",inError);
+    // console.log("error:",inError);
     if (tracking) {
       __positionError(inError);
     } else {

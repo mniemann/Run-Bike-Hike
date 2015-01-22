@@ -61,7 +61,7 @@ var HomeView = function() {
   }
 
   function displayError(inError){
-    console.log("error:", inError);
+    // console.log("error:", inError);
     document.getElementById("home-acc").innerHTML = "??";
     document.getElementById("home-lat").innerHTML = "??";
     document.getElementById("home-lon").innerHTML = "??";
