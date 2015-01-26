@@ -52,7 +52,9 @@ var HomeView = function() {
     // empty message area
     document.getElementById('msg').innerHTML = "";
     //display compass
-    __displayCompass(inPosition.coords);
+    if (document.getElementById("compass-flipbox").flipped) {
+      __displayCompass(inPosition.coords);
+    }
     if (inPosition.coords.heading > 0 ) {
       document.getElementById('home-dir').innerHTML = inPosition.coords.heading.toFixed(0);
     } else {
