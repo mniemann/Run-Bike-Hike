@@ -122,6 +122,7 @@ var Controller = function() {
     document.getElementById("btn-start-stop").className = "recommend big";
     document.getElementById("btn-start-stop").textContent = _("start");
     document.getElementById("btn-pause").className="hidden recommend small icon icon-pause";
+    __displayTrack(track);
   }
   function pauseRecording() {
     if (pause) {

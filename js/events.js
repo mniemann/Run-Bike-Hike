@@ -51,7 +51,7 @@ document.querySelector("#btn-pause").addEventListener ("click", function () {
 document.querySelector("#btn-confirm-stop").addEventListener ("click", function () {
   "use strict";
   TracksView.reset();
-  document.getElementById("views").showCard(1);
+  // document.getElementById("views").showCard(1);
   Controller.stopWatch();
 });
 /* Stop tracking Cancel button */
