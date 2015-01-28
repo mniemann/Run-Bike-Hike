@@ -54,6 +54,8 @@ var HomeView = function() {
     //display compass
     if (document.getElementById("compass-flipbox").flipped) {
       __displayCompass(inPosition.coords);
+    } else {
+      document.getElementById("home-compass").style.transform = "none";
     }
     if (inPosition.coords.heading > 0 ) {
       document.getElementById('home-dir').innerHTML = inPosition.coords.heading.toFixed(0);

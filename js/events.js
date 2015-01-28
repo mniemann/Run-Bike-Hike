@@ -34,6 +34,9 @@ document.querySelector("#a-flipbox").addEventListener ("click", function () {
   "use strict";
   console.log("toggle flipbox");
   document.getElementById("compass-flipbox").toggle();
+  if(!document.getElementById("compass-flipbox").flipped) {
+    document.getElementById("home-compass").style.transform = "none";
+  }
 });
 
 
